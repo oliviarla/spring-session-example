@@ -51,6 +51,7 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
     request.getSession().setAttribute("principal", authResult.getPrincipal());
     request.getSession().setAttribute("authorities", authResult.getAuthorities());
     request.getSession().setAttribute(FindByIndexNameSessionRepository.PRINCIPAL_NAME_INDEX_NAME, authResult.getPrincipal());
+    request.getSession().setMaxInactiveInterval(0);
     try {
       response.getWriter().write(
           "login success");

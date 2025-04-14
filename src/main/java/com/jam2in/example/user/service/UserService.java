@@ -28,6 +28,9 @@ public class UserService {
     return userRepository.save(user);
   }
 
+  /**
+   * Support only when activating ArcusIndexedSessionRepository
+   */
   public List<UserSessionDto> getAllSessionsByUser(String username) {
     return findByIndexNameSessionRepository.findByPrincipalName(username).values()
         .stream().map(UserSessionDto::new).toList();

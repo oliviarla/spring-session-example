@@ -37,7 +37,8 @@ dependencies {
 
     // for spring session arcus
     implementation 'com.jam2in.arcus:arcus-java-client:1.13.4'
-//    implementation(files('libs/spring-session-data-arcus-1.0.0-plain.jar'))
+    implementation(files('libs/spring-session-data-arcus-1.0.0-plain.jar'))
+    implementation "org.springframework.session:spring-session-core:3.2.1"
 }
 
 tasks.named('test') {

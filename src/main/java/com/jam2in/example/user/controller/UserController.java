@@ -2,9 +2,9 @@ package com.jam2in.example.user.controller;
 
 import com.jam2in.example.user.dto.JoinDto;
 import com.jam2in.example.user.dto.UserSessionDto;
-import com.jam2in.example.user.entity.User;
 import com.jam2in.example.user.service.UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.lang.NonNull;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,8 +30,8 @@ public class UserController {
 
   @GetMapping("/me")
   @PreAuthorize("isAuthenticated()")
-  public String getMe(@AuthenticationPrincipal User user) {
-    return user.toString();
+  public String getMe(@NonNull @AuthenticationPrincipal String username) {
+    return username;
   }
 
   @GetMapping("/users")

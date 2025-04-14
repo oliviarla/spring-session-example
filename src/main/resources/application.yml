@@ -1,6 +1,5 @@
 server:
   port: 8083
-
 spring:
   jpa:
     properties:
@@ -18,3 +17,7 @@ spring:
     console:
       enabled: true
       path: /h2-console
+#  session:
+#    arcus:
+#      prefix: session_test
+#      repository-type: default
