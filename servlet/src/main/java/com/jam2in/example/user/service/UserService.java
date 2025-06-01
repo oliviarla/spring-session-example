@@ -29,7 +29,7 @@ public class UserService {
   }
 
   /**
-   * Support only when activating ArcusIndexedSessionRepository
+   * Support only when IndexedSessionRepository is enabled
    */
   public List<UserSessionDto> getAllSessionsByUser(String username) {
     return findByIndexNameSessionRepository.findByPrincipalName(username).values()

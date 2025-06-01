@@ -1,0 +1,9 @@
+CREATE TABLE users
+(
+    id       INTEGER AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(256) not null,
+    password VARCHAR(256) not null,
+    role     VARCHAR(256) not null,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    last_accessed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);

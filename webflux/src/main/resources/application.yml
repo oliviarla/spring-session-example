@@ -1,0 +1,18 @@
+server:
+  port: 8082
+spring:
+  r2dbc:
+    url: r2dbc:h2:mem:///test
+    username: name
+    password: pass
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-admin-password:
+#  session:
+#    arcus:
+#      prefix: session_test
+#      repository-type: default
+debug: true
